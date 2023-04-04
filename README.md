@@ -2,16 +2,16 @@
 
 ## 📋 Introdução
 
-Projeto para a INFNET - Curso de Devops e .
+Projeto para a INFNET - Curso de Devops e Integração Contínua.
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
-* Possuir a versão do Java JDK 17 ou superior;
-* Instalar o Apache Maven 3.x.x;
+* Ter instalada a versão do Java JDK 17 ou superior;
+* Ter instalado o Apache Maven 3.x.x;
 * Utilizar uma IDE para Java - Eclipse, IntelliJ ou Visual Studio Code;
-* Instalar o MySQL 5.7 ou superior;
-* Instalar o Docker e Docker Compose.
+* Ter instalado o MySQL 5.7 ou superior;
+* Ter instalado o Docker e Docker Compose.
 
 ## 🚀 Realizando o Setup
 
@@ -29,6 +29,12 @@ create database notes_app
 
 Gere o build do projeto:
 
+- Antes você pode rodar os testes unitários utilizando o comando:
+
+```bash
+mvn test -Dtest="NoteControllerTest" <-- Classe que contém os testes
+```
+
 ```bash
 mvn clean package
 java -jar target/SpringDemo-0.0.1-SNAPSHOT.jar
@@ -43,13 +49,13 @@ mvn spring-boot:run
 
 Para executar o projeto utilizando o docker, execute o comando:
 
-```docker
+```bash
 docker compose up -d
 ```
 
 Para desmontar o projeto (containers, volume, network), execute o comando:
 
-```docker
+```bash
 docker compose down
 ```
 
