@@ -30,7 +30,7 @@ public class NoteControllerTest {
     @InjectMocks
     private NoteController noteController;
 
-    private final Note note;
+    private Note note;
 
     public NoteControllerTest() {
         this.note = new Note();
@@ -42,6 +42,7 @@ public class NoteControllerTest {
         note.setContent("Content 1");
         List<Note> notes = new ArrayList<>();
         notes.add(note);
+        note = new Note();
         note.setTitle("Note 2");
         note.setContent("Content 2");
         note.setCreatedAt(new Date());
