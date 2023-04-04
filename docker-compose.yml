@@ -1,27 +1,31 @@
-version: '3'
+version: "3.8"
 
 services:
-  mysql-docker-container:
+  mysqldb:
+    container_name: mysqldb
     image: mysql:latest
     environment:
-      - MYSQL_ROOT_PASSWORD=root1234
-      - MYSQL_DATABASE=notes_app
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root1234
-    volumes:
-      - /data/mysql
+      MYSQL_ROOT_PASSWORD: root1234
+      MYSQL_DATABASE: notes_app
     ports:
-      - 3333:3306
-    container_name: mysql-db
+      - "3306:3306"
+    networks:
+      mysql-net:
 
-  spring-demo-app:
+  spring-demo:
+    container_name: spring-demo
     build:
       context: ./
       dockerfile: Dockerfile
-    depends_on:
-      - mysql-docker-container
     ports:
-      - 8080:8080
-    volumes:
-      - /data/spring-boot-app
-    container_name: spring-demo-app
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/notes_app?autoReconnect=true&useSSL=false
+    depends_on:
+      - mysqldb
+    networks:
+      mysql-net:
+    restart: on-failure
+
+networks:
+  mysql-net:
