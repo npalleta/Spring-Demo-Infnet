@@ -61,6 +61,8 @@ docker compose down
 
 O app vai rodar nesse endereço <http://localhost:8080>.
 
+As chamadas das APIs se encontram na collection do Postman **MySQL-Spring-Test.postman_collection.json**.
+
 Caso o comando *docker compose up -d* não funcione, rode o *docker compose down* e após isso, rode o compose novamente. 
 
 [⬆ Voltar ao topo](#Spring-Demo-Infnet)
