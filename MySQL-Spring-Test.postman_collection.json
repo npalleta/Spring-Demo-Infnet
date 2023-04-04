@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "6effeb41-c639-46e0-a85e-b4cc93ce21e2",
+		"name": "MySQL-Spring-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5000052"
+	},
+	"item": [
+		{
+			"name": "GET_NOTES",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test('Content-Type is present', function () {",
+							"    pm.response.to.have.header('Content-Type');",
+							"});",
+							"",
+							"pm.test('Body contains string', () => {",
+							"    const text = pm.response.text();",
+							"    pm.expect(pm.response.text()).to.include(\"title\");",
+							"    pm.expect(pm.response.text()).to.include(\"content\");",
+							"    pm.expect(pm.response.text()).to.include(\"createdAt\");",
+							"    pm.expect(pm.response.text()).to.include(\"updatedAt\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_NOTES_BY_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_NOTES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"COMBO1\",\n    \"content\": \"COMBO1\",\n    \"createdAt\": \"2022-01-01T00:00:00.000+00:00\",\n    \"updatedAt\": \"2022-01-01T00:00:00.000+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_NOTES",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"COMBO_UPDATE\",\n    \"content\": \"COMBO_UPDATE\",\n    \"createdAt\": \"2023-04-04T23:01:32.000+00:00\",\n    \"updatedAt\": \"2023-04-04T23:01:32.000+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_NOTES",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
