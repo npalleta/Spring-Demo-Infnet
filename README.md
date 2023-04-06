@@ -36,7 +36,7 @@ mvn test -Dtest="NoteControllerTest" <-- Classe que contém os testes
 ```
 
 ```bash
-mvn clean package
+mvn clean package ou  mvn clean install -U
 java -jar target/SpringDemo-0.0.1-SNAPSHOT.jar
 ```
 Alternativamente, você pode rodar dessa forma:
