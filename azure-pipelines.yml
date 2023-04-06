@@ -1,0 +1,53 @@
+trigger:
+- main
+
+variables:
+
+  # Azure Resource Manager connection created during pipeline creation
+  azureSubscription: 'e3dcad11-f614-4d1c-b500-82e8ddb34833'
+
+  # Web app name
+  webAppName: 'MyAzureAPISpringBoot'
+
+  # Environment name
+  environmentName: 'Production'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: MavenPackageAndPublishArtifacts
+    displayName: Maven Package and Publish Artifacts
+
+    steps:
+    - task: Maven@3
+      displayName: 'Maven Package'
+      inputs:
+        codeCoverageFailIfEmpty: true
+        codeCoverageToolOption: 'JaCoCo'
+        effectivePomSkip: false
+        goals: 'package'
+        javaHomeOption: 'JDKVersion'
+        jdkArchitectureOption: 'x64'
+        jdkVersionOption: '1.17'
+        mavenAuthenticateFeed: false
+        mavenOptions: '-Xmx3072m'
+        mavenPomFile: 'pom.xml'
+        mavenVersionOption: 'Default'
+        publishJUnitResults: true
+        # sonarQubeRunAnalysis: true
+        # sqMavenPluginVersionChoice: 'latest'
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    
+    - task: CopyFiles@2
+      displayName: 'Copy Files to artifact staging directory'
+      inputs:
+        SourceFolder: '$(System.DefaultWorkingDirectory)'
+        Contents: '**/target/*.?(war|jar)'
+        TargetFolder: $(Build.ArtifactStagingDirectory)
+
+    - upload: $(Build.ArtifactStagingDirectory)
+      artifact: drop
