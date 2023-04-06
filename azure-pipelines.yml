@@ -21,21 +21,26 @@ stages:
   jobs:
   - job: MavenPackageAndPublishArtifacts
     displayName: Maven Package and Publish Artifacts
-    pool:
-      vmImage: $(vmImageName)
 
     steps:
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
-        mavenPomFile: 'pom.xml'
-        mavenOptions: '-Xmx3072m'
-        javaHomeOption: 'JDKVersion'
-        jdkVersionOption: '1.17'
-        jdkArchitectureOption: 'x64'
-        publishJUnitResults: true
-        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        codeCoverageFailIfEmpty: true
+        codeCoverageToolOption: 'Cobertura'
+        effectivePomSkip: false
         goals: 'package'
+        javaHomeOption: 'JDKVersion'
+        jdkArchitectureOption: 'x64'
+        jdkVersionOption: '1.17'
+        mavenAuthenticateFeed: false
+        mavenOptions: '-Xmx3072m'
+        mavenPomFile: 'pom.xml'
+        mavenVersionOption: 'Default'
+        publishJUnitResults: true
+        sonarQubeRunAnalysis: true
+        sqMavenPluginVersionChoice: 'latest'
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
     
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
