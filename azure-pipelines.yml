@@ -38,8 +38,8 @@ stages:
         mavenPomFile: 'pom.xml'
         mavenVersionOption: 'Default'
         publishJUnitResults: true
-        sonarQubeRunAnalysis: true
-        sqMavenPluginVersionChoice: 'latest'
+        # sonarQubeRunAnalysis: true
+        # sqMavenPluginVersionChoice: 'latest'
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
     
     - task: CopyFiles@2
