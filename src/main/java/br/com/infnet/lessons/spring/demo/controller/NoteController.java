@@ -1,8 +1,8 @@
-package br.com.infnet.lessons.spring.SpringDemo.controller;
+package br.com.infnet.lessons.spring.demo.controller;
 
-import br.com.infnet.lessons.spring.SpringDemo.exception.ResourceNotFoundException;
-import br.com.infnet.lessons.spring.SpringDemo.model.Note;
-import br.com.infnet.lessons.spring.SpringDemo.repository.NoteRepository;
+import br.com.infnet.lessons.spring.demo.exception.ResourceNotFoundException;
+import br.com.infnet.lessons.spring.demo.model.Note;
+import br.com.infnet.lessons.spring.demo.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

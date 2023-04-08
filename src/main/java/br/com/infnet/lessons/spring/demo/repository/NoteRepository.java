@@ -1,6 +1,6 @@
-package br.com.infnet.lessons.spring.SpringDemo.repository;
+package br.com.infnet.lessons.spring.demo.repository;
 
-import br.com.infnet.lessons.spring.SpringDemo.model.Note;
+import br.com.infnet.lessons.spring.demo.model.Note;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

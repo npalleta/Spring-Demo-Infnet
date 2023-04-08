@@ -1,4 +1,4 @@
-package br.com.infnet.lessons.spring.SpringDemo;
+package br.com.infnet.lessons.spring.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
