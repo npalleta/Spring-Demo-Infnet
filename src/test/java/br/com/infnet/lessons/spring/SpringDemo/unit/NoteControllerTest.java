@@ -1,9 +1,9 @@
 package br.com.infnet.lessons.spring.SpringDemo.unit;
 
-import br.com.infnet.lessons.spring.SpringDemo.controller.NoteController;
-import br.com.infnet.lessons.spring.SpringDemo.exception.ResourceNotFoundException;
-import br.com.infnet.lessons.spring.SpringDemo.model.Note;
-import br.com.infnet.lessons.spring.SpringDemo.repository.NoteRepository;
+import br.com.infnet.lessons.spring.demo.controller.NoteController;
+import br.com.infnet.lessons.spring.demo.exception.ResourceNotFoundException;
+import br.com.infnet.lessons.spring.demo.model.Note;
+import br.com.infnet.lessons.spring.demo.repository.NoteRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
