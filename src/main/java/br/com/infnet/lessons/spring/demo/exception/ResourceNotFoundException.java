@@ -1,4 +1,4 @@
-package br.com.infnet.lessons.spring.SpringDemo.exception;
+package br.com.infnet.lessons.spring.demo.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
