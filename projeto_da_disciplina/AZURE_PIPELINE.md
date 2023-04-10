@@ -15,3 +15,7 @@
 <br />
 
 ![AZURE JACOCO REPORT](../projeto_da_disciplina/imgs/AZURE_PIPELINE/AZURE_03.png "AZURE JACOCO REPORT")
+
+🔙 ![Voltar ao repositório](../README.md)
+
+---
