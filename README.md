@@ -59,7 +59,7 @@ Para desmontar o projeto (containers, volume, network), execute o comando:
 docker compose down
 ```
 
-*A API vai rodar nesse endereço (local):* <http://localhost:9000>.
+*O app vai rodar nesse endereço (local):* <http://localhost:9000>.
 
 *A API está publicada no endereço:* <https://spring-demo-infnet.herokuapp.com/api/notes>
 
