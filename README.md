@@ -59,7 +59,7 @@ Para desmontar o projeto (containers, volume, network), execute o comando:
 docker compose down
 ```
 
-*O app vai rodar nesse endereço (local):* <http://localhost:9000>.
+*O API vai rodar nesse endereço (local):* <http://localhost:9000>.
 
 *A API está publicada no endereço:* <https://spring-demo-infnet.herokuapp.com/api/notes>
 
@@ -76,6 +76,7 @@ As rubricas estão nos links seguintes:
 3. [- Papertrail](projeto_da_disciplina/PAPERTRAIL.md);
 4. [- Prometheus](projeto_da_disciplina/PROMETHEUS.md);
 5. [- Sonarcloud](projeto_da_disciplina/SONARCLOUD.md).
+6. [- Terraform + AWS EC2](projeto_da_disciplina/TERRAFORM.md).
 
 [⬆ Voltar ao topo](#Spring-Demo-Infnet)
 
