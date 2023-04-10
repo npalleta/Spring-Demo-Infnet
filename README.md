@@ -72,6 +72,8 @@ As rubricas estão nos links seguintes:
 1. [- Actuator](projeto_da_disciplina/ACTUATOR.md);
 2. [- Azure Pipeline](projeto_da_disciplina/AZURE_PIPELINE.md);
 3. [- Papertrail](projeto_da_disciplina/PAPERTRAIL.md);
+4. [- Prometheus](projeto_da_disciplina/PROMETHEUS.md);
+5. [- Sonarcloud](projeto_da_disciplina/SONARCLOUD.md).
 
 [⬆ Voltar ao topo](#Spring-Demo-Infnet)
 
