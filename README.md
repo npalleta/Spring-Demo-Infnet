@@ -65,11 +65,12 @@ As chamadas das APIs se encontram na collection do Postman **MySQL-Spring-Test.p
 
 Caso o comando *docker compose up -d* não funcione, rode o *docker compose down* e após isso, rode o compose novamente. 
 
-### Projeto da Disciplina
+## 👨‍💻 Projeto da Disciplina
 
 As rubricas estão nos links seguintes:
 
 1. [- Actuator](projeto_da_disciplina/ACTUATOR.md);
+2. [- Azure Pipeline](projeto_da_disciplina/AZURE_PIPELINE.md);
 
 [⬆ Voltar ao topo](#Spring-Demo-Infnet)
 
