@@ -1,0 +1,10 @@
+## Azure Pipeline
+
+**AZURE PIPELINE - JOBS**
+![AZURE PIPELINE](../projeto_da_disciplina/imgs/AZURE_PIPELINE/AZURE_01.png "AZURE PIPELINE")
+
+**AZURE TESTS RESULT**
+![AZURE TESTS RESULT](../projeto_da_disciplina/imgs/AZURE_PIPELINE/AZURE_02.png "AZURE TESTS RESULT")
+
+**AZURE JACOCO REPORT**
+![AZURE JACOCO REPORT](../projeto_da_disciplina/imgs/AZURE_PIPELINE/AZURE_03.png "AZURE JACOCO REPORT")

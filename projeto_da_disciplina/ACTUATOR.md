@@ -1,4 +1,4 @@
-### Actuator Metrics
+## Actuator Metrics
 
 **ACTUATOR API**
 ![ACTUATOR API](../projeto_da_disciplina/imgs/ACTUATOR/ACTUATOR_API.png "ACTUATOR API")
