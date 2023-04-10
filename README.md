@@ -59,11 +59,21 @@ Para desmontar o projeto (containers, volume, network), execute o comando:
 docker compose down
 ```
 
-O app vai rodar nesse endereço <http://localhost:8080>.
+O app vai rodar nesse endereço <http://localhost:9000>.
 
 As chamadas das APIs se encontram na collection do Postman **MySQL-Spring-Test.postman_collection.json**.
 
 Caso o comando *docker compose up -d* não funcione, rode o *docker compose down* e após isso, rode o compose novamente. 
+
+## 👨‍💻 Projeto da Disciplina
+
+As rubricas estão nos links seguintes:
+
+1. [- Actuator](projeto_da_disciplina/ACTUATOR.md);
+2. [- Azure Pipeline](projeto_da_disciplina/AZURE_PIPELINE.md);
+3. [- Papertrail](projeto_da_disciplina/PAPERTRAIL.md);
+4. [- Prometheus](projeto_da_disciplina/PROMETHEUS.md);
+5. [- Sonarcloud](projeto_da_disciplina/SONARCLOUD.md).
 
 [⬆ Voltar ao topo](#Spring-Demo-Infnet)
 
