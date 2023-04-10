@@ -59,9 +59,9 @@ Para desmontar o projeto (containers, volume, network), execute o comando:
 docker compose down
 ```
 
-*O API vai rodar nesse endereço (local):* <http://localhost:9000>.
+*A API (LOCAL) vai rodar nesse endereço:* <http://localhost:9000>.
 
-*A API está publicada no endereço:* <https://spring-demo-infnet.herokuapp.com/api/notes>
+*A API (PROD) está publicada no endereço:* <https://spring-demo-infnet.herokuapp.com/api/notes>
 
 As chamadas das APIs se encontram na collection do Postman **MySQL-Spring-Test.postman_collection.json**.
 
