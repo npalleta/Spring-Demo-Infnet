@@ -18,7 +18,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "9000:9000"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/notes_app?autoReconnect=true&useSSL=false
     depends_on:
