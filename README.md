@@ -61,7 +61,7 @@ docker compose down
 
 *A API (LOCAL) vai rodar nesse endereço:* <http://localhost:9000>.
 
-*A API (PROD) está publicada no endereço:* <https://spring-demo-infnet.herokuapp.com/api/notes> *(FOI DESATIVADA)*
+*A API (PROD) está publicada no endereço:* <https://spring-demo-infnet.herokuapp.com/api/notes> *(FOI DESATIVADA)*.
 
 As chamadas das APIs se encontram na collection do Postman **MySQL-Spring-Test.postman_collection.json**.
 
