@@ -29,14 +29,14 @@ create database notes_app
 
 Gere o build do projeto:
 
-- Antes você pode rodar os testes unitários utilizando o comando:
+- Antes, você pode rodar os testes unitários utilizando o comando:
 
 ```bash
 mvn test -Dtest="NoteControllerTest" <-- Classe que contém os testes
 ```
 
 ```bash
-mvn clean package ou  mvn clean install -U
+mvn clean package ou mvn clean install -U
 java -jar target/SpringDemo-0.0.1-SNAPSHOT.jar
 ```
 Alternativamente, você pode rodar dessa forma:
@@ -61,7 +61,7 @@ docker compose down
 
 *A API (LOCAL) vai rodar nesse endereço:* <http://localhost:9000>.
 
-*A API (PROD) está publicada no endereço:* <https://spring-demo-infnet.herokuapp.com/api/notes>
+*A API (PROD) está publicada no endereço:* <https://spring-demo-infnet.herokuapp.com/api/notes> *(FOI DESATIVADA)*
 
 As chamadas das APIs se encontram na collection do Postman **MySQL-Spring-Test.postman_collection.json**.
 
